@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puppy Bowl</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .player {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .player img {
+        width: 50px;
+        height: 200;
+      }
+      .details {
+        display: none;
+        margin-top: 20px;
+      }
+      #roster {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Puppy Bowl Roster</h1>
+
+    <div id="roster"></div>
+
+    <!-- Add Player Form -->
+    <h2>Add a New Player</h2>
+    <form id="add-player-form">
+      <input type="text" id="player-name" placeholder="Player Name" required />
+      <input
+        type="text"
+        id="player-breed"
+        placeholder="Player Breed"
+        required
+      />
+      <input type="text" id="player-image" placeholder="Image URL" required />
+      <button type="submit">Add Player</button>
+    </form>
+
+    <div id="details" class="details">
+      <h3 id="detail-name"></h3>
+      <p id="detail-breed"></p>
+      <p id="detail-team"></p>
+      <img id="detail-image" src="" alt="Player Image" />
+      <button id="back-button">Back</button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
